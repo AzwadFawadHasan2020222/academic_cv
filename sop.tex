@@ -1,0 +1,104 @@
+%% Base on http://tex.stackexchange.com/questions/150900/latex-coding-for-statement-of-purpose
+
+\documentclass{article}
+\usepackage[
+  a4paper,
+  margin=1in,
+  headsep=4pt, % separation between header rule and text
+]{geometry}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{tgschola}
+\usepackage{lastpage}
+\usepackage[natbibapa]{apacite}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{%
+  \footnotesize\sffamily
+  \yourname\quad
+  web: \textcolor{blue}{\itshape\yourweb}\quad
+  \textcolor{blue}{\youremail}}
+\fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
+
+\newcommand{\soptitle}{Statement of Purpose}
+
+\newcommand{\yourname}{Azwad Fawad Hasan}
+\newcommand{\youremail}{azwadfawadhasan@gmail.com, 2020222@iub.edu.bd}
+\newcommand{\yourweb}{https://azwadfawadhasan.github.io/resume/}
+
+\newcommand{\statement}[1]{\par\medskip
+  \textcolor{blue}{\textbf{#1:}}\space
+}
+\usepackage{comment}
+\usepackage[
+  breaklinks,
+  pdftitle={\yourname - \soptitle},
+  pdfauthor={\yourname},
+  unicode
+]{hyperref}
+
+\begin{document}
+
+\begin{center}\LARGE\soptitle\\
+\large of \yourname\ (PhD applicant for Fall---2025)
+\end{center}
+
+\hrule
+\vspace{1pt}
+\hrule height 1pt
+
+\bigskip
+
+I am a recent cum laude Computer Science and Engineering graduate from Independent University, Bangladesh (IUB). My minor was Management Information System (MIS). In the past two years, I've been privileged to have the opportunity to obtain industry research and work experience as well as academic research experience while doing my last year undergrad courses.
+
+% Aamra networks experinece 
+%\begin{comment}
+I am currently working as an Executive (SWE) for the R\&D and Pre-Sales team of Aamra Networks Limited (ANL), one of the biggest internet service providers of Bangladesh. Here, my current work is to develop features for the the in house ERP web application of Aamra Group. I personally was responsible for making features like CRM Sales Reports containing MRC, QRC, YRC etc data and sales figures. Previous to this, I developed the entire software pipeline for infiltrawatch, a webpplication used to detect and deter burglars and intrudars by making use of modern computer vision and existing cctv infrastructure. I have also developed a flask facial attendance web application for ANL. During this project I Evaluated and tested various state-of-the-art facial recognition technologies including FaceNet, DeepFace, Dlib, InsightFace, VGG, ARCFace, MTCNN, ONNX Face Detection, etc., to determine the most suitable solution for project requirements. Furthermore, designed a robust processing pipeline capable of analyzing large video files, extracting time intervals for recognized faces, and generating insightful analysis graphs. 
+%\end{comment}
+
+
+%The ERP web application uses codeignitor, php, phpMyAdmin mysql, cron jobs, js, jquery, datatables etc.. 
+%My current research focuses on filling existing study gaps 
+%add later after addding all three of ehm
+
+
+
+
+
+Since September 2022, I have been working with senior lecuturer Md. Fahad Monir. During this period I applied concepts of Network Softwarization (SDN+NFV) to produce simulations in order to generate valueable QoS metrics data particularly packet loss and jitter to help network enthusiasts, academics researchers with valuable QoS data crucial for starting work in Mininet from scratch and for gaining insights for advaned networking application and services of NGNs. I worked on two papers as the 2nd author
+
+The first one was  My first paper called paper called "Exploring SDN Based Firewall And NAPT: A comparative analysis with iptables and OVS in Mininet", got accepted in the first conference we submitted it to which was the 38th International Conference on Advanced Information Networking and Applications (AINA-2024). In this research paper, my job was to fill the existing research gaps by doing detailed comparative analysis of OVS controller based networking modules. My job was to implement and methodically assess performance distinctions between OVS-based network modules operating with OVS policies and those utilizing iptables. Our work  reveals analysis of the network QoS metrics data and delivers key baseline data for network optimization and future SDN projects, giving academic researchers and netowrk enthusiasts a head start without the need to build the initial SDN setups from scratch.
+
+The second paper I worked on as a second author is called "Benchmarking Network Functionality: Performance Evaluation of SDN Controllers on Different Network Functions", was accepted in the The 2024 IEEE 100th Vehicular Technology Conference (VTC2024-Fall). In this paper, we carried out a similar stress performance analysis of SDN-based network functions but focused solely on three different controllers: Open vSwitch (OVS), OpenFlow Reference controller, and RYU, to understand their impact on packet loss and jitter. This work was done to understand how real world applications like firewalls and loadbalancer's data plane get affected by these SDN controllers in different network scenario. This paper uniquely compares and analyzes these three controllers to address the research gap of assessing their efficiency and behaviour in SDN flow control. I was responsible for the implementation of the networking testbed and for carrying out the experiments. Although, we faced a couple of rejections but over each iteration the quality of our work improved and I got the oppurtunity to work with researchers abroad. Fabrizio Granelli from UniTrento, Italy and  Md Mozammal Hoque from univeristy of houston texas provided me valueable insights and lessons with their supervision.
+
+I submitted my first 1st authored paper, "Comparative Study of DoS Attack Impacts on SDN Controllers: QoS Baselines for RYU and Open vSwitch",  to the 7th edition of Conference on Cloud and Internet of Things 2024 (CIoT’24). Under the supervision of MD Zoheb Hassan and Md. Tarek Habib, I idetentified the knowlegdge gaps in the existing work, definedtand scoped the research problem, then I simulated eight different DoS cyberattacks after setting up our network testbed and carried out the iPerf tests for each cyberattacks, analyzed the results and wrote the paper. My work was also responsible for providing valueable baseline packet loss and jitter data for different cyberattacks on different SDN data planes. Throughout this journey, I came across multiple obstacles which I overcame and as a result gained an amazing ability to unstuck myself while realizing that progress in research is not always a linear straight path. I learned not to give up and to keep trying to face the problem from different angles and perspective. I found out that keeping a consistent track of the outcome of different approaches was helpful to reflect on what I accomplished and this helped me keep my innerself motivated in a way.
+
+By getting myself involved in such working environments, today I feel like these have given me highly valuable research skills and also made me realize what research field should I pursue for my future endeavors. 
+
+
+Today, Computer Networks and its security are immensely important for next generation networks like 6G for users to access high volumes of data in a variety of applications safely. I would like to use my technical skills like planning and building network simulations,deep learning, software engineering workflow to build resilitent systems for next generations networks / build better IDS  in sdn nfv environments,  build resilient and secure SDN controllers that can withstand cyber attacks and recover from attacks, control failure  and other compromised applications/ security and privacy in 5g and beyon/ zero trust architecture in NGN which are scalable , and low lancentcy with real time response time
+
+My interest greatly overlaps with DR X's research interests which foces on doing dash dash dash. I had a chat with him and he foudn me to be a good fit for his lab.as my cufrent intersts are also in the theme of his research x.
+
+My biggest takeaway from all these years of working in the field of academic research and industry is that exploring other interests and fields is an ongoing iterative processes, I  get most motivated when I see a connection betawween my work and a real world problem . My goal is to become an researchaer and a professor teachign cs.Specifically, I am ready to further my training in finding and defining research problems, while when given a problem, I want to be able to ask intelligent questions to poke holes, identify if it is ill-defined, and make it right. By the end of my PhD, I aim to have a broad understanding of computer science, develop a long-term vision of my field, master a specific area in my research, and make real world impact using my knowledge.
+
+
+% and then also obtain baseline QoS data metrics
+%I did this by implementing these networking modules in mininet and then by obtained baseline QoS data metrics from them
+%As a senior in college with a strong academic record and a desire to succeed professionally, I am an ambitious, driven, and youthful person. I have an independent, challenge-loving attitude and a desire for ongoing self-improvement. In addition to self-learning web and app development, I am now pursuing a CSE degree and looking out for work opportunities .
+
+
+%\statement{Project \#1}
+%Morbi sed sapien ut ante elementum \citep{belkin2002using} luctus vitae et libero. Praesent
+
+
+%\statement{Conclusion}
+
+
+%\bibliographystyle{apacite}
+%\bibliography{sample}
+
+\end{document}
+
+enter image description here
