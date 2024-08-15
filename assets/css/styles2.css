@@ -40,3 +40,70 @@ body {
     font-size: 1rem;
     color: #555555;
 }
+
+.ai-google-scholar-square, .ai-dblp-square, .ai-researchgate-square, .fa-linkedin, .ai-cv-square {
+    font-size: 2rem; /* Adjust this value to make the icons larger */
+}
+
+.social-buttons {
+    font-size: 2rem; /* Adjust this value to make the icons larger */
+    margin: 0 8px; /* Add space between icons */
+}
+
+.ai-cv-square {
+    font-size: 2rem; /* Ensure CV icon matches the size of others */
+}
+
+
+
+@media (max-width: 1000px) {
+    .h3 {
+        font-size: 1.5rem;
+    }
+    .h5 {
+        font-size: 1.25rem;
+    }
+    .img-thumbnail {
+        width: 150px;
+        height: 150px;
+    }
+    .social-buttons {
+        font-size: 1.5rem;
+        margin: 0 5px;
+    }
+}
+
+
+.email-address {
+    display: inline-block;
+  }
+  
+  .email-address b, .email-address .secondary-email {
+    display: inline;
+  }
+  
+  .secondary-email {
+    font-size: 0.9em;
+    color: #666; /* adjust the color to your liking */
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .email-address b {
+      display: block;
+    }
+    .email-address .secondary-email {
+      display: block;
+      margin-top: 5px; /* add some space between the two email addresses */
+    }
+    .email-address b, .email-address .secondary-email {
+      font-size: 0.8em; /* reduce font size on smaller screens */
+    }
+  }
+  
+  /* Media query for even smaller screens */
+  @media (max-width: 480px) {
+    .email-address b, .email-address .secondary-email {
+      font-size: 0.7em; /* reduce font size even further on very small screens */
+    }
+  }
