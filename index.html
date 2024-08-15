@@ -6,7 +6,30 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="author" content="Camille Kurtz">
 		<meta name="description" content="Azwad - Aspiring Ph.D Student">
-		<title>Azwad - Aspiring Ph.D Student</title>
+		<title>Azwad Fawad Hasan</title>
+		<!-- Standard favicon -->
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon_package/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon_package/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon_package/favicon-16x16.png">
+		<link rel="manifest" href="assets/img/favicon_package/site.webmanifest">
+		<link rel="mask-icon" href="assets/img/favicon_package/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		<!-- <link rel="icon" type="image/x-icon" href="/favicon.ico"> -->
+		<!-- PNG favicon -->
+		<!-- <link rel="icon" type="image/png" href="/assets/images/favicon.png" sizes="32x32"> -->
+		<!-- SVG favicon -->
+		<!-- <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg"> -->
+		<!-- Apple Touch Icon -->
+		<!-- <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180"> -->
+		<!-- Web Manifest -->
+		<!-- <link rel="manifest" href="/site.webmanifest"> -->
+
+
+
+
+
+
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
@@ -25,16 +48,24 @@
 		<link rel="stylesheet" href="/path/to/folder/css/academicons.min.css"/>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-		<!-- <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_ZgPOdo6v7W.json"  background="transparent"  speed="10"  style="width: 100px; height: 100px;"  loop  autoplay></lottie-player> -->
+		<!-- https://gsap.com/
+		 	https://mattboldt.github.io/typed.js/
+			https://michalsnik.github.io/aos/
+		 
+		
+		-->
 		<script src="https://cdn.lordicon.com/lordicon.js"></script>
 		<script src="assets/js/lordicon_icons_animations.js"></script>
+		<!-- typedjs -->
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
 
 	</head>
 	<body>
 		<div class="container py-4">
 			<!-- making the card gain -->
 			<div class="row pb-1 text-center text-lg-left">
-				<div class="col-12 col-md-3 col-lg-2 pb-2 px-lg-0 pr-xl-3 pl-xl-0 mx-auto">
+				<div class="col-12 col-md-3 col-lg-2 pb-2 px-lg-0 pr-xl-3 pl-xl-0 mx-auto" id="profile_picture">
 					<img src="assets/img/homepage/1_profile_picture_circle.png" class="img-thumbnail img-fluid rounded-circle" alt="Profile Picture">
 				</div>
 				<div class="col-12 col-lg-10 mx-auto">
@@ -52,7 +83,22 @@
 								<b>azwadfawadhasan@gmail.com</b>
 								<span class="secondary-email">2020222@iub.edu.bd</span>
 							</samp>
-							
+							<br>
+							<span id="typed-output"></span>
+							<script>
+								var typed = new Typed('#typed-output', {
+								  strings: ["Hello, I'm Azwad.", "Welcome to my portfolio!", "If you'd like to connect or collaborate,", "Reach out to me via email or through my social links."],
+								  typeSpeed: 50, // Typing speed in milliseconds
+								  backSpeed: 30, // Backspacing speed in milliseconds
+								  loop: true, // Loop the typing animation
+								  showCursor: true, // Show the blinking cursor
+								  cursorChar: '|', // Character for the cursor
+								  startDelay: 500, // Delay before typing starts
+								  backDelay: 1000, // Delay before backspacing
+								});
+							  </script>
+							  
+
 							<br>
 							<div class="d-flex justify-content-center justify-content-lg-start">
 								<a href="https://github.com/AzwadFawadHasan" target="_blank" class="social-buttons fab fa-github"></a>
@@ -69,7 +115,7 @@
 			</div>
 			
 			<div class="row pb-3">	
-				<ul class="nav nav-tabs">
+				<ul class="nav nav-tabs" id="nav-tab-id">
 					<li class="nav-item">
 						<a class="nav-link active" data-toggle="tab" href="#bio" id="about-link">
 							<span>
@@ -248,12 +294,20 @@
 				<div class="tab-content">
 					<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 					<div class="tab-pane container active" id="bio">
-						<h1 class="pb-1"><b>Short bio</b></h1>
+						<h5><b>Short bio</b></h5>
 						<p class="text-justify">
-							I am Full Professor of computer science at <a href="https://u-paris.fr/">Université Paris Cité</a> (France), <a href="https://math-info.u-paris.fr/">UFR Mathématiques et Informatique</a>, and researcher at the <a href="http://lipade.mi.parisdescartes.fr/">LIPADE</a> laboratory, <a href="https://w3.mi.parisdescartes.fr/sip-lab/">SIP team</a>. I lead scientific projects in AI on pattern recognition, image analysis and computer vision. More precisely, I am interested in the underlying problems related to image representations, with visual, semantic and perceptual aspects. Our research team works on academic projects with state-of-the-art approaches (image segmentation, classification, retrieval, understanding), in thematic areas such as remote sensing, medical or document imaging, or on industrial R&D projects (e.g. CIFRE PhD thesis) with shorter-term methodological contributions. As lecturer, I teach computer sciences (programming, algorithms, data structures, image analysis, pattern recognition, etc.) in higher education at different levels (LMD).
+							<!-- I am Full Professor of computer science at <a href="https://u-paris.fr/">Université Paris Cité</a> (France), <a href="https://math-info.u-paris.fr/">UFR Mathématiques et Informatique</a>, and researcher at the <a href="http://lipade.mi.parisdescartes.fr/">LIPADE</a> laboratory, <a href="https://w3.mi.parisdescartes.fr/sip-lab/">SIP team</a>. I lead scientific projects in AI on pattern recognition, image analysis and computer vision. More precisely, I am interested in the underlying problems related to image representations, with visual, semantic and perceptual aspects. Our research team works on academic projects with state-of-the-art approaches (image segmentation, classification, retrieval, understanding), in thematic areas such as remote sensing, medical or document imaging, or on industrial R&D projects (e.g. CIFRE PhD thesis) with shorter-term methodological contributions. As lecturer, I teach computer sciences (programming, algorithms, data structures, image analysis, pattern recognition, etc.) in higher education at different levels (LMD). -->
+
+							<!-- Azwad Fawad Hasan is an aspiring Ph.D. student with a passion for software engineering, research, and technology. With a background in Computer Science and Engineering, Azwad has contributed to several research projects and is always eager to explore new challenges in the tech industry. He is driven by a curiosity to innovate and a commitment to excellence. When he's not coding or researching, Azwad enjoys connecting with like-minded professionals and expanding his knowledge through continuous learning. -->
+
+							I’m an aspiring Ph.D. student with a strong foundation in Computer Science and Engineering. Driven by a deep curiosity for cutting-edge technology and software development, I have a keen interest in research and innovation. I’m passionate about solving complex problems and am continuously expanding my expertise to make meaningful contributions to the tech community. Whether through collaboration or independent projects, I’m always looking to push the boundaries of what's possible.
+
+							I'm Vasco Xu, currently a third-year PhD student at the University of Chicago advised by Prof. Hank Hoffmann and Prof. Karan Ahuja. Prior to that, I earned a B.Phil in Computer Science at the University of Pittsburgh where I was fortunate to work with Prof. Daniel Mossé, Prof. Sherif Khattab, and Prof. Amy Babay. Even prior to that, I grew up in Lisbon, Portugal.
+
+							My research interests lie at the intersection of embedded systems, machine learning, and HCI. I'm interested in developing novel systems to better understand, communicate and interact with the world around us.
 						</p>
-						<h1 class="pb-1"><b>Short CV</b></h1>
-						<div class="row py-2">
+						<!-- <h1 class="pb-1"><b>Short CV</b></h1> -->
+						<!-- <div class="row py-2">
 							<div class="pl-3">
 								[Since 2023]
 							</div>
@@ -275,8 +329,8 @@
 								<a href="https://w3.mi.parisdescartes.fr/sip-lab/">SIP team</a>
 								<br>
 							</div>
-						</div>
-						<div class="row py-2">
+						</div> -->
+						<!-- <div class="row py-2">
 							<div class="pl-3">
 								[May &#8239;&#8239;2022]
 							</div>
@@ -284,87 +338,12 @@
 								Habilitation à Diriger des Recherches (HDR) in computer science, 
 								<a href="https://u-paris.fr/">Université Paris Cité</a>
 								<br>
-								<!-- 
-								<span class="fas fa-flask pr-2"></span>
-								 -->
 								<span class="fas fa-graduation-cap pr-2"></span>
 								Thesis title: La représentation des images : de la description à l’interprétation
 								<br>
 							</div>
-						</div>
-						<div class="row py-2">
-							<div class="pl-3">
-								[2013-2023]
-							</div>
-							<div class="col">
-								Associate professor (
-								<em>Maître de conférences</em>
-								) of computer science, 
-								<a href="https://u-paris.fr/">Université Paris Cité</a>
-								 (formerly Paris 5 - Descartes)
-								<br>
-								<span class="fas fa-chalkboard-teacher"></span>
-								Teaching at the 
-								<a href="https://iutparis-seine.u-paris.fr/">IUT de Paris - Rives de Seine</a>
-								<br>
-								<span class="fas fa-flask"></span>
-								Research at the 
-								<a href="http://lipade.mi.parisdescartes.fr/">LIPADE</a>
-								, in the 
-								<a href="https://w3.mi.parisdescartes.fr/sip-lab/">SIP team</a>
-								<br>
-							</div>
-						</div>
-						<div class="row py-2">
-							<div class="pl-3">
-								[2012–2013]
-							</div>
-							<div class="col">
-								Post-doctoral fellow, 
-								<a href="http://www.stanford.edu/~rubin/">Quantitative Imaging Laboratory</a>
-								, 
-								<a href="http://www.stanford.edu/">Stanford University</a>
-								 (USA)
-								<br>
-								<span class="fas fa-flask pr-2"></span>
-								Project: CBIR for medical imaging with semantic representations
-								<br>
-								Advisor: 
-								<a href="https://rubinlab.stanford.edu/">Daniel L. Rubin</a>
-							</div>
-						</div>
-						<div class="row py-2">
-							<div class="pl-3">
-								[2009–2012]
-							</div>
-							<div class="col">
-								PhD in computer science, 
-								<a href="http://icube.unistra.fr/en/">LSIIT (UMR CNRS/UdS 7005)</a>
-								, 
-								<a href="http://www.unistra.fr/">Université de Strasbourg</a>
-								 (France)
-								<br>
-								<!-- 
-								<span class="fas fa-flask pr-2"></span>
-								 -->
-								<span class="fas fa-graduation-cap pr-2"></span>
-								Thesis title: Approche collaborative segmentation-classification pour l'analyse descendante d'images multirésolutions
-								<br>
-								Advisors: 
-								<a href="https://sdc.icube.unistra.fr/en/index.php/Pierre_Gan%C3%A7arski">Pierre Gançarski</a>
-								 and 
-								<a href="https://crestic.univ-reims.fr/en/nicolas.passat">Nicolas Passat</a>
-								<br>
-								<span class="fas fa-chalkboard-teacher pr-2"></span>
-								Teaching assistant at the 
-								<a href="http://mathinfo.unistra.fr/">UFR Mathématiques et Informatique</a>
-								<br>
-								<span class="fas fa-camera-retro pr-2"></span>
-								Check out my 
-								<a href="https://genealogy.math.ndsu.nodak.edu/id.php?id=190756">academic ancestors</a>
-								 (Mathematics Genealogy Project)
-							</div>
-						</div>
+						</div> -->
+
 					</div>
 					<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 					<div class="tab-pane container fade" id="education">
@@ -4124,10 +4103,10 @@
 					</div>
 					<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 					<div class="tab-pane container fade" id="tech_stack">
-						<h1 class="pb-1"><b>Involvement in national research groups</b></h1>
+						<h1 class="pb-1"><b>https://lottiefiles.com/</b></h1>
 						<ul>
-							<li>[since 2018] Elected member of the Board of the French Association for Pattern Recognition (<a href="http://www.afrif.asso.fr/">AFRIF</a>)</li>
-							<li>[2022--2024] Elected member of the Board of the Document Analysis Research Group (<a href="https://grce.labri.fr/">GRCE</a>) </li>
+						
+							<li>Check Tech Stack circular type shittt in above link</a>) </li>
 						</ul>
 						<h1 class="pb-1"><b>Habilitation à Diriger des Recherches, HDR</b></h1>
 						
@@ -4213,8 +4192,8 @@
 
 </body>
 <footer class="text-center text-lg-start bg-light text-muted"><span>
-This template was provided by 
-<a href="https://www.labri.fr/perso/mclement/">Michaël Clément
+Shoutout to 
+<a href="https://www.labri.fr/perso/mclement/">Michaël Clément/ website last update @
 </a>
 .
 </span>
