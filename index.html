@@ -21,6 +21,10 @@
 		<script src="assets/js/coding_projects_cards.js"></script>
 		<link href="assets/css/coding_projects.css" rel="stylesheet">
 
+		<!-- acheivements_cards -->
+		<link href="assets/css/acheivements_cards.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&subset=latin-ext" rel="stylesheet">
+
 
 		
 		<!-- Step Animation scripts. Make sure to add data-animation="step-sequence" id="add-step-animation" -->
@@ -71,6 +75,10 @@
 		<script src="assets/js/lordicon_icons_animations.js"></script>
 		<!-- typedjs -->
 		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+
+		
+
 
 
 	</head>
@@ -1120,6 +1128,103 @@
 					<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 					<div class="tab-pane container fade" id="achievements">
 						<h1 class="pb-1"><b>Horizontal scrool</b></h1>
+						    <!-- achievements_section -->
+						    <!-- achievements_section -->
+							<section id="achievements_section">
+								<!-- intro -->
+								<div class="intro">
+									<h1>Horizontal Scrolling Cards with GSAP</h1>
+								</div>
+								<!-- intro end -->
+
+								<!-- horizontal scroll -->
+								<section id="horizontal-scoll">
+									<div class="horizontal-scoll-wrapper">
+										<div class="horizontal">
+											<div>
+												<div class="card">
+													<h2>Card 1</h2>
+												</div>
+											</div>
+											<div>
+												<div class="card">
+													<h2>Card 2</h2>
+												</div>
+											</div>
+											<div>
+												<div class="card">
+													<h2>Card 3</h2>
+												</div>
+											</div>
+											<div>
+												<div class="card">
+													<h2>Card 4</h2>
+												</div>
+											</div>
+											<div>
+												<div class="card">
+													<h2>Card 5</h2>
+												</div>
+											</div>
+											<div>
+												<div class="card">
+													<h2>Card 6</h2>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+								<!-- Achevements horizontal scroll end -->
+
+								<!-- Achevements footer -->
+								<footer>
+									<div>
+										<h2>Credits</h2>
+										<a href="https://www.humming.design" target="_blank">Humming</a>
+										<a href="https://greensock.com" target="_blank">GSAP</a>
+									</div>
+								</footer>
+								<!--  Achevements footer end -->
+							</section>
+							<!-- achievements_section end -->
+
+							<!-- GSAP and ScrollTrigger Scripts -->
+							<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+							<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+							
+							<script>
+								document.addEventListener("DOMContentLoaded", function () {
+									gsap.registerPlugin(ScrollTrigger);
+
+									let horizontalSection = document.querySelector('#achievements_section .horizontal');
+
+									console.log(horizontalSection.scrollWidth);
+
+									gsap.to('#achievements_section .horizontal', {
+										x: () => horizontalSection.scrollWidth * -1,
+										xPercent: 100,
+										scrollTrigger: {
+											trigger: '#achievements_section .horizontal',
+											start: 'center center',
+											end: '+=2000px',
+											pin: '#achievements_section #horizontal-scoll',
+											scrub: true,
+											invalidateOnRefresh: true
+										}
+									});
+								});
+								window.addEventListener("resize", () => {
+									ScrollTrigger.refresh();
+								});
+								document.getElementById('achievements-link').addEventListener('click', function() {
+									// Delay the ScrollTrigger refresh to ensure proper layout adjustments
+									setTimeout(() => {
+										ScrollTrigger.refresh();
+									}, 100); // Adjust the delay as necessary
+								});
+								
+								
+    						</script>
 						
 						
 					</div>
