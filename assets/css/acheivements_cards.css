@@ -103,41 +103,144 @@
             
         }
 
-        /* Responsive adjustments */
-        @media screen and (max-width: 768px) {
-            #achievements_section .horizontal-scoll-wrapper {
-                height: 400px;
-            }
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    #achievements_section .horizontal-scoll-wrapper {
+        height: 350px; /* Adjusted for better fit */
+    }
 
-            #achievements_section .horizontal .card {
-                width: 400px;
-                padding: 40px 30px;
-            }
+    #achievements_section .horizontal .card {
+        width: 350px; /* Reduced width for smaller screens */
+        padding: 30px 20px; /* Adjusted padding */
+    }
 
-            #achievements_section h1 {
-                font-size: 3rem;
-            }
+    #achievements_section h1 {
+        font-size: 2.5rem; /* Adjusted font size */
+    }
 
-            #achievements_section h2 {
-                font-size: 1.5rem;
-            }
-        }
+    #achievements_section h2 {
+        font-size: 1.5rem;
+    }
+}
 
-        @media screen and (max-width: 480px) {
-            #achievements_section .horizontal-scoll-wrapper {
-                height: 300px;
-            }
+@media screen and (max-width: 480px) {
+    #achievements_section .horizontal-scoll-wrapper {
+        height: 280px; /* Reduced height for extra small screens */
+    }
 
-            #achievements_section .horizontal .card {
-                width: 300px;
-                padding: 30px 20px;
-            }
+    #achievements_section .horizontal .card {
+        width: 280px; /* Further reduced width */
+        padding: 20px 15px; /* Further adjusted padding */
+    }
 
-            #achievements_section h1 {
-                font-size: 2.5rem;
-            }
+    #achievements_section h1 {
+        font-size: 2rem; /* Adjusted font size */
+    }
 
-            #achievements_section h2 {
-                font-size: 1.25rem;
-            }
-        }
+    #achievements_section h2 {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #achievements_section .horizontal-scoll-wrapper {
+        height: 220px; /* Even smaller height for very small screens */
+    }
+
+    #achievements_section .horizontal .card {
+        width: 220px; /* Further reduced width */
+        padding: 15px 10px; /* Reduced padding */
+    }
+
+    #achievements_section h1 {
+        font-size: 1.75rem; /* Adjusted font size */
+    }
+
+    #achievements_section h2 {
+        font-size: 1rem;
+    }
+}
+
+
+/* General card styling */
+/* General card styling */
+#responsive-card {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Content inside the card */
+#card-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#card-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+#card-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#card-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    #card-title {
+        font-size: 20px;
+    }
+
+    #card-text {
+        font-size: 14px;
+    }
+
+    #card-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    #responsive-card {
+        padding: 15px;
+    }
+
+    #card-title {
+        font-size: 18px;
+    }
+
+    #card-text {
+        font-size: 12px;
+    }
+
+    #card-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+/* Make the card wider on larger screens */
+@media (min-width: 985px) {
+    #responsive-card {
+        max-width: 90%;  /* Increase the max-width to 90% of the screen width */
+        margin: 20px auto;  /* Center the card horizontally */
+    }
+}

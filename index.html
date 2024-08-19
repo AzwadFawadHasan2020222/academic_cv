@@ -1127,15 +1127,23 @@
 					</div>
 					<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
 					<div class="tab-pane container fade" id="achievements">
-						<h1 class="pb-1"><b>Horizontal scrool</b></h1>
+						<div id="responsive-card">
+							<h1 id="card-title">Responsive Card Title</h1>
+							<p id="card-text">This is a simple responsive card. It will take up the entire width of the screen and adjust its content accordingly.</p>
+							<button id="card-button">Click Me</button>
+							<h1 class="pb-1"><b>Horizontal scrool</b></h1>
 						    <!-- achievements_section -->
 						    <!-- achievements_section -->
 							<section id="achievements_section">
 								<!-- intro -->
-								<div class="intro">
-									<h1>Horizontal Scrolling Cards with GSAP</h1>
-								</div>
+								
 								<!-- intro end -->
+								<div class="responsive-card-wrapper" id="achievements-card">
+									<!-- This is where the GSAP code will go -->
+									<div class="intro">
+										<h1>Horizontal Scrolling Cards with GSAP</h1>
+									</div>
+								</div>
 
 								<!-- horizontal scroll -->
 								<section id="horizontal-scoll">
@@ -1194,37 +1202,59 @@
 							
 							<script>
 								document.addEventListener("DOMContentLoaded", function () {
-									gsap.registerPlugin(ScrollTrigger);
-
-									let horizontalSection = document.querySelector('#achievements_section .horizontal');
-
-									console.log(horizontalSection.scrollWidth);
-
-									gsap.to('#achievements_section .horizontal', {
-										x: () => horizontalSection.scrollWidth * -1,
-										xPercent: 100,
-										scrollTrigger: {
-											trigger: '#achievements_section .horizontal',
-											start: 'center center',
-											end: '+=2000px',
-											pin: '#achievements_section #horizontal-scoll',
-											scrub: true,
-											invalidateOnRefresh: true
+									// Function to initialize GSAP animations
+									function initGSAPAnimation() {
+										// Kill any existing ScrollTriggers
+										ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+							
+										gsap.registerPlugin(ScrollTrigger);
+							
+										let horizontalSection = document.querySelector('#achievements_section .horizontal');
+							
+										// Ensure the horizontal section exists and is visible before initializing the animation
+										if (horizontalSection) {
+											gsap.to('#achievements_section .horizontal', {
+												x: () => horizontalSection.scrollWidth * -1,
+												xPercent: 100,
+												scrollTrigger: {
+													trigger: '#achievements_section .horizontal',
+													start: 'center center',
+													end: '+=2000px',
+													pin: '#achievements_section #horizontal-scoll',
+													scrub: true,
+													invalidateOnRefresh: true
+												}
+											});
+							
+											// Refresh ScrollTrigger after initialization
+											setTimeout(() => {
+												ScrollTrigger.refresh();
+											}, 100);
 										}
+									}
+							
+									// Add event listener to the "Achievements" tab link
+									document.getElementById('achievements-link').addEventListener('click', function() {
+										// Wait for the tab to become visible
+										setTimeout(() => {
+											initGSAPAnimation();
+										}, 100); // Adjust the delay as needed
+									});
+							
+									// Optionally, you can add similar logic to re-initialize when resizing
+									window.addEventListener("resize", function() {
+										setTimeout(() => {
+											ScrollTrigger.refresh();
+										}, 100);
 									});
 								});
-								//window.addEventListener("resize", () => {
-									//ScrollTrigger.refresh();
-								//});
-								document.getElementById('achievements-link').addEventListener('click', function() {
-									// Delay the ScrollTrigger refresh to ensure proper layout adjustments
-									setTimeout(() => {
-										ScrollTrigger.refresh();
-									}, 100); // Adjust the delay as necessary
-								});
-								
-								
-    						</script>
+							</script>
+							
+							
+						</div>
+						
+
+						
 						
 						
 					</div>
