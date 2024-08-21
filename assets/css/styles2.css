@@ -484,10 +484,12 @@ body {
   height: auto; /* Maintains the aspect ratio */
   display: block;
   margin: 0 auto; /* Centers the image */
+  
 }
 
 .hov {
   transition: transform 0.3s ease-in-out;
+  
 }
 
 .hov:hover {
